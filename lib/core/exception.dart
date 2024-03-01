@@ -3,3 +3,5 @@
 class CacheException implements Exception {}
 
 class InitDBException implements Exception {}
+
+class DioException_ implements Exception {}
