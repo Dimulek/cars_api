@@ -10,7 +10,7 @@ import '../model/cars_api_model.dart';
 
 class CarsRepositoryImpl implements CarsRepository {
   @override
-  Future<Either<Fauiler, List<CarEntity>>> writePr(
+  Future<Either<Fauiler, List<CarEntity>>> writeCar(
     int limit,
     String model,
   ) async {
@@ -22,6 +22,7 @@ class CarsRepositoryImpl implements CarsRepository {
           .map((json) => CarModel.fromJson(json).toEntity())
           .toList());
     } on DioException catch (_) {
+      print("\n\n\n\n" + (_.message??"") + "\n\n\n\n");
       return left(DioException_());
     }
   }

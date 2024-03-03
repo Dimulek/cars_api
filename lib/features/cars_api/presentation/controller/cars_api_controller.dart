@@ -27,7 +27,7 @@ class CarsController extends ChangeNotifier{
   void search([int limit = 10, String model = "camry"]) async {
     state = CarState.loading;
 
-    final result = await _repo.writePr(limit, model);
+    final result = await _repo.writeCar(limit, model);
 
     result.fold((l) => state = CarState.error, (list) {
       _carsList = list;

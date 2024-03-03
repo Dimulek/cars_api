@@ -16,7 +16,7 @@ Future<void> init() async {
   );
   service.registerLazySingleton(() => Dio(
         BaseOptions(
-          // headers: {"X-Api-Key": "Ihn3F2x44nf/EbWui5SOFA==YebHR8EAtQWefVF2"},
+          headers: {"X-Api-Key": "Ihn3F2x44nf/EbWui5SOFA==YebHR8EAtQWefVF2"},
           baseUrl: 'https://api.api-ninjas.com/v1/',
         ),
       )..interceptors.addAll(
